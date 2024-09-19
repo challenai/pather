@@ -8,10 +8,10 @@ export interface Radius4 {
 export class Rectangle {
   static Basic(x: number, y: number, width: number, height: number): string {
     return `
-      M${x} ${y}
-      L${x + width} ${y}
-      L${x + width} ${y + height}
-      L${x} ${y + height}
+      M${x - width / 2} ${y - height / 2}
+      l${width} 0
+      l0 ${height}
+      l${-width} 0
       Z
     `;
   }
