@@ -33,14 +33,14 @@ export class Rectangle {
     if (!radius.br) radius.br = 0;
 
     return `
-      M${x + radius.tl} ${y}
-      L${x + width - radius.tr} ${y}
+      M${x - (width - radius.tl - radius.tr) / 2} ${y - height / 2}
+      l${width - radius.tr - radius.tl} 0
       a${radius.tr} ${radius.tr} 0 0 1 ${radius.tr} ${radius.tr}
-      L${x + width} ${y + height - radius.br}
+      l0 ${height - radius.tr - radius.br}
       a${radius.br} ${radius.br} 0 0 1 ${-radius.br} ${radius.br}
-      L${x + radius.bl} ${y + height}
+      l${radius.bl + radius.br - width} 0
       a${radius.bl} ${radius.bl} 0 0 1 ${-radius.bl} ${-radius.bl}
-      L${x} ${y + radius.tl}
+      l0 ${radius.tl + radius.bl - height}
       a${radius.tl} ${radius.tl} 0 0 1 ${radius.tl} ${-radius.tl}
       Z
     `;
