@@ -8,6 +8,7 @@
     "type": "git",
     "url": "git+https://github.com/challenai/pather.git"
   },
+  "license": "MIT",
   "devDependencies": {
     "@types/bun": "latest"
   },
