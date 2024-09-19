@@ -16,4 +16,14 @@ export class Step {
 
     return path;
   }
+
+  // TODO
+  static StepRound(
+    x: number,
+    y: number,
+    points: number[][],
+    radius: number
+  ): string {
+    return "";
+  }
 }
