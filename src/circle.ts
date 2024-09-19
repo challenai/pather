@@ -1,5 +1,5 @@
 export class Circle {
-  static Simple(x: number, y: number, radius: number): string {
+  static Basic(x: number, y: number, radius: number): string {
     return `
       M${x} ${y}
       a${radius} ${radius} 0 1 0 ${-radius * 2} 0
