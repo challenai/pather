@@ -1,10 +1,12 @@
 export class Capsule {
-  static Basic(x: number, y: number, width: number, height: number): string {
+  static Row(x: number, y: number, width: number, height: number): string {
+    if (width <= height) return "";
+
     const radius = height / 2;
-    const width_ = width - height;
+    const innerWidth = width - height;
     return `
       M${x} ${y}
-      L${x + width_} ${y}
+      L${x + innerWidth} ${y}
       a${radius} ${radius} 0 0 1 0 ${height}
       L${x} ${y + height}
       a${radius} ${radius} 0 0 1 0 ${-height}
