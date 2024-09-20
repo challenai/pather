@@ -20,7 +20,7 @@
     "noUnusedParameters": false,
     "noPropertyAccessFromIndexSignature": false,
     "outDir": "dist",
-    "declarationDir": "dist/dts",
+    "declarationDir": "dist/types",
     "rootDir": "lib",
   },
   "include": [
