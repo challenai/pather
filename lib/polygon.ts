@@ -1,17 +1,17 @@
 export class Polygon {
-  static Basic(x: number, y: number, points: number[][]): string {
+  static Basic(points: number[][]): string {
     const n = points.length;
     if (n < 3) return "";
-    let offsetX = 0, offsetY = 0;
-    let path = "";
-    for (const point of points) {
-      path += ` L${point[0]} ${point[1]}`
-      offsetX += point[0];
-      offsetY += point[1];
+    let path = `M${points[0][0]} ${points[0][1]}`;
+    for (let i = 0; i < n; i++) {
+      path += ` L${points[i][0]} ${points[i][1]}`
     }
 
-    return `M${x - offsetX / n} ${y - offsetY / n} ${path} Z`;
+    path += " Z";
+
+    return path;
   }
+
 
   static Regular(x: number, y: number, sides: number, radius: number): string {
     const base = 2 * Math.PI / sides;
