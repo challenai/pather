@@ -45,4 +45,17 @@ export class Rectangle {
       Z
     `;
   }
+
+
+  static Diamond(x: number, y: number, width: number, height: number): string {
+    const rx = width / 2;
+    const ry = height / 2;
+    return `
+      M${x - rx} ${y}
+      l${rx} ${ry}
+      l${rx} ${-ry}
+      l${-rx} ${-ry}
+      Z
+    `;
+  }
 }
