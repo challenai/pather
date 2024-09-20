@@ -9,4 +9,14 @@ export class Triangle {
       Z
     `;
   }
+
+  static Isosceles(x: number, y: number, bottom: number, height: number): string {
+    const mx = bottom / 2;
+    return `
+      M${x - mx} ${y + height / 3}
+      l${bottom} 0
+      l${-mx} ${-height}
+      Z
+    `;
+  }
 }
