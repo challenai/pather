@@ -4,15 +4,21 @@
   "version": "0.0.1",
   "type": "module",
   "author": "Challen Ai <fengyiai@gmail.com>",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/challenai/pather.git"
   },
-  "license": "MIT",
-  "devDependencies": {
-    "@types/bun": "latest"
+  "scripts": {
+    "build": "tsc && esbuild dist/*.js --bundle --minify --target=chrome58,firefox57,safari11,edge16 --outdir=dist/min/ --out-extension:.js=.min.js",
+    "lint": "eslint lib/**"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
+  },
+  "devDependencies": {
+    "esbuild": "0.23.1",
+    "eslint": "^9.10.0",
+    "typescript-eslint": "^8.6.0"
   }
 }
