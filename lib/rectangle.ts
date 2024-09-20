@@ -58,4 +58,15 @@ export class Rectangle {
       Z
     `;
   }
+
+  static Parallelogram(x: number, y: number, width: number, height: number, offset: number): string {
+    const mx = (width + Math.abs(offset)) / 2;
+    return `
+      M${x - mx} ${y - height / 2}
+      l${width} 0
+      l${offset} ${height}
+      l${-width} 0
+      Z
+    `;
+  }
 }
