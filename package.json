@@ -1,7 +1,8 @@
 {
   "name": "pather",
-  "module": "index.ts",
+  "module": "lib/index.js",
   "version": "0.0.1",
+  "description": "light weight path generation library for canvas and svg",
   "type": "module",
   "author": "Challen Ai <fengyiai@gmail.com>",
   "license": "MIT",
@@ -10,7 +11,7 @@
     "url": "git+https://github.com/challenai/pather.git"
   },
   "scripts": {
-    "build": "tsc && esbuild dist/*.js --bundle --minify --target=chrome58,firefox57,safari11,edge16 --outdir=dist/min/ --out-extension:.js=.min.js",
+    "build": "tsc && esbuild dist/*.js --bundle --minify --target=chrome58,firefox57,safari11,edge16 --outdir=dist/lib/ --out-extension:.js=.min.js",
     "lint": "eslint lib/**"
   },
   "peerDependencies": {
