@@ -1,7 +1,7 @@
 {
   "name": "@pattaya/pather",
   "module": "lib/index.js",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "light weight path generation library for canvas and svg",
   "type": "module",
   "typings": "types/index.d.ts",
