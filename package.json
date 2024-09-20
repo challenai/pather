@@ -1,11 +1,24 @@
 {
-  "name": "pather",
+  "name": "@pattaya/pather",
   "module": "lib/index.js",
   "version": "0.0.1",
   "description": "light weight path generation library for canvas and svg",
   "type": "module",
+  "typings": "types/index.d.ts",
+  "types": "types/index.d.ts",
+  "keywords": [
+    "graph",
+    "canvas",
+    "svg",
+    "path",
+    "pather"
+  ],
   "author": "Challen Ai <fengyiai@gmail.com>",
   "license": "MIT",
+  "files": [
+    "lib",
+    "types"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/challenai/pather.git"
