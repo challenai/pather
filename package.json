@@ -6,6 +6,13 @@
   "type": "module",
   "typings": "types/index.d.ts",
   "types": "types/index.d.ts",
+  "keywords": [
+    "graph",
+    "canvas",
+    "svg",
+    "path",
+    "pather"
+  ],
   "author": "Challen Ai <fengyiai@gmail.com>",
   "license": "MIT",
   "files": [
