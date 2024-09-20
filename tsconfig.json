@@ -1,26 +1,29 @@
 {
   "compilerOptions": {
-    // Enable latest features
     "lib": [
       "ESNext",
-      "DOM"
     ],
-    "target": "ESNext",
+    "target": "ES2022",
     "module": "ESNext",
     "moduleDetection": "force",
+    "removeComments": true,
+    "declaration": true,
     "allowJs": false,
-    // Bundler mode
-    "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
+    "moduleResolution": "Node",
+    "allowImportingTsExtensions": false,
     "verbatimModuleSyntax": true,
-    "noEmit": true,
-    // Best practices
+    "noEmit": false,
     "strict": true,
     "skipLibCheck": true,
     "noFallthroughCasesInSwitch": true,
-    // Some stricter flags (disabled by default)
     "noUnusedLocals": false,
     "noUnusedParameters": false,
-    "noPropertyAccessFromIndexSignature": false
-  }
+    "noPropertyAccessFromIndexSignature": false,
+    "outDir": "dist",
+    "declarationDir": "dist/types",
+    "rootDir": "lib",
+  },
+  "include": [
+    "lib/**/*"
+  ]
 }
