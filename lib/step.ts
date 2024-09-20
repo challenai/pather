@@ -17,7 +17,6 @@ export class Step {
     return path;
   }
 
-  // TODO
   static StepRound(
     x: number,
     y: number,
