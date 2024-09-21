@@ -24,7 +24,7 @@
     "url": "git+https://github.com/challenai/pather.git"
   },
   "scripts": {
-    "build": "tsc && esbuild dist/*.js --bundle --minify --target=chrome58,firefox57,safari11,edge16 --outdir=dist/lib/ --out-extension:.js=.min.js",
+    "build": "tsc && esbuild dist/*.js --bundle --minify --target=chrome58,firefox57,safari11,edge16 --format=esm --outdir=dist/lib/ --out-extension:.js=.min.js",
     "lint": "eslint lib/**"
   },
   "peerDependencies": {
