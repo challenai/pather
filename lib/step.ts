@@ -17,7 +17,7 @@ export class Step {
     return path;
   }
 
-  static StepRound(
+  static Round(
     x: number,
     y: number,
     points: number[][],
@@ -50,9 +50,8 @@ export class Step {
         nx = points[i + 1][1] > x ? x + radius : x - radius;
         clockwise = points[i][1] > y !== points[i + 1][1] > x;
       }
-      path += ` L${x} ${y} A${radius} ${radius} 0 0 ${
-        clockwise ? 1 : 0
-      } ${nx} ${ny}`;
+      path += ` L${x} ${y} A${radius} ${radius} 0 0 ${clockwise ? 1 : 0
+        } ${nx} ${ny}`;
       x = nx;
       y = ny;
     }

@@ -45,4 +45,28 @@ export class Rectangle {
       Z
     `;
   }
+
+
+  static Diamond(x: number, y: number, width: number, height: number): string {
+    const rx = width / 2;
+    const ry = height / 2;
+    return `
+      M${x - rx} ${y}
+      l${rx} ${ry}
+      l${rx} ${-ry}
+      l${-rx} ${-ry}
+      Z
+    `;
+  }
+
+  static Parallelogram(x: number, y: number, width: number, height: number, offset: number): string {
+    const mx = (width + Math.abs(offset)) / 2;
+    return `
+      M${x - mx} ${y - height / 2}
+      l${width} 0
+      l${offset} ${height}
+      l${-width} 0
+      Z
+    `;
+  }
 }
