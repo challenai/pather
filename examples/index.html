@@ -4,14 +4,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>pather</title>
+    <title>example</title>
 </head>
 
 <body>
-    <canvas id="graph"></canvas>
-    <script>
-        const canvas = document.getElementById("#graph");
+    <canvas width="900" height="600" id="graph"></canvas>
+    <script src="/pather.min.js" type="module"></script>
+    <script type="module">
+        import { Rectangle, Polygon, Curve, Circle } from "./pather.min.js";
+
+        const canvas = document.getElementById("graph");
         const ctx = canvas.getContext("2d");
+
+        const rect = new Path2D(Rectangle.Round(300, 300, 200, 100, 20));
+        ctx.stroke(rect);
+
+        const circle1 = new Path2D(Circle.Basic(420, 300, 6));
+        ctx.stroke(circle1);
+
+        const arrow = new Path2D(Curve.Multi([[420, 300], [520, 460], [720, 300]], 200));
+        ctx.stroke(arrow);
+
+        const circle2 = new Path2D(Circle.Basic(720, 300, 6));
+        ctx.stroke(circle2);
+
+        const polygon = new Path2D(Polygon.Regular(800, 240, 5, 80));
+        ctx.stroke(polygon);
     </script>
 </body>
 
